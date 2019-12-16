@@ -19,7 +19,7 @@
 //  RPG Maker MV Plugin Description
 //-------------------------------------------------------------------------------
 /*:
- * @plugindesc Return to a "Go To Label" statement after it's called!
+ * @plugindesc Return to a "Jump to Label" statement after it's called!
  * 
  * 
  * @author KeeganKLM
@@ -51,13 +51,13 @@
  *                               Abstract (Summary)
  * ------------------------------------------------------------------------------
  *      
- *      After calling a 'Go to Label' statement, you may return to
- *   that same statement when a specific 'Go to Label' is called.
+ *      After calling a 'Jump to Label' statement, you may return to
+ *   that same statement when a specific 'Jump to Label' is called.
  *      
- *      Go to Label: "Return: x"
+ *      Jump to Label: "Return: x"
  *         where 'x' is the label the system will look for.
  *      
- *      Go to Label: "RETURN"
+ *      Jump to Label: "RETURN"
  *         Use this when you want to go back to where "Return: x" is.
  *      
  *      
@@ -77,14 +77,14 @@
  *                               1. Instructions
  * ------------------------------------------------------------------------------
  *      
- *   [Go To Label: "x"]
+ *   [Jump to Label: "x"]
  *      
  *      Using "Return: Label123" for "x" will cause the system to go to the 
  *   first label named "Label123". In other words, it acts as if you had 
- *   instead called [Go To Label: "Label123"].
+ *   instead called [Jump to Label: "Label123"].
  *      
- *      Once the system runs into a [Go To Label: "RETURN"], it will jump back 
- *   to the most recently called [Go To Label: "Return: Label123"] statement.
+ *      Once the system runs into a [Jump to Label: "RETURN"], it will jump back 
+ *   to the most recently called [Jump to Label: "Return: Label123"] statement.
  *      
  *      This can go multiple layers deep, if you so desire, calling multiple
  *   "Return: Label" statements before reaching a "RETURN" statement.
@@ -106,12 +106,12 @@
  *      
  *         (Start of Event)
  *         ...code 1...
- *         [Go to Label: "Return: Random Talk 1"]
+ *         [Jump to Label: "Return: Random Talk 1"]
  *         ...code 3...
  *         [Exit Event Processing]
  *         [Label: "Random Talk 1"]
  *         ...code 2...
- *         [Go to Label: "RETURN"]
+ *         [Jump to Label: "RETURN"]
  *         (End of Event)
  *      
  *      This will return as:
@@ -157,7 +157,7 @@
  *      LabelName = The name of an existing Label.
  *      
  *      This will memorize 'LabelName', but not go to it.
- *      I other words, it's like you called [Go To Label: "Return: LabelName"],
+ *      I other words, it's like you called [Jump to Label: "Return: LabelName"],
  *   but without actually going to 'LabelName'.
  *      
  *      
@@ -182,7 +182,7 @@
  *      Prefix Value
  *         Default: "Return: "
  *      
- *      If the "x" in [Go To Label: "x"] begins with the Prefix Value,
+ *      If the "x" in [Jump to Label: "x"] begins with the Prefix Value,
  *   then the system will memorize where it currently is, and jump to
  *   a label that matches whatever is after the Prefix Value.
  *      
@@ -190,7 +190,7 @@
  *      RETURN Value
  *         Default: "RETURN"
  *      
- *      If the "x" in [Go To Label: "x"] matches the RETURN Value,
+ *      If the "x" in [Jump to Label: "x"] matches the RETURN Value,
  *   then it will jump to the most recently memorized label's location.
  *      
  *      
@@ -213,7 +213,7 @@
  * ------------------------------------------------------------------------------
  *      
  *      This plugin should only be incompatible with plugins that directly 
- *   modify the "Label" and "Go To Label" methods, which very few (if any?) 
+ *   modify the "Label" and "Jump to Label" methods, which very few (if any?) 
  *   other plugins actually do.
  *      
  *      
@@ -232,7 +232,7 @@
  *      (On Windows, you can open the console with f12.)
  *      
  *      While the Console Log is on, this plugin may cause framerate issues
- *   if several "Go To Label" statements are being called at a time.
+ *   if several "Jump to Label" statements are being called at a time.
  *      
  *      
  * ------------------------------------------------------------------------------
