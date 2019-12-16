@@ -278,7 +278,7 @@
  *   to my email account:
  *      keeganmackey250(at)gmail(dot)com
  *      
- *      I also have GitHub that I made recently:
+ *      I also have a GitHub that I made recently:
  *      https://github.com/KeeganKLM
  *      
  *      
