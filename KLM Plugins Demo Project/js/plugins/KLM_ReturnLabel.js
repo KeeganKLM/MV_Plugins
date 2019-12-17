@@ -96,7 +96,7 @@
  *   last "Return: Label" that it came across. This can cause future problems
  *   if/when you call more "Return: Label" and "RETURN" statements within 
  *   another event later on.
- *      In the next section, "Commands," the first listed command is a
+ *      In the "Commands" section, the first listed command is a
  *   workaround to this.
  *      
  *      
@@ -151,14 +151,6 @@
  *      
  *      This will do the same thing as the previous command, but
  *   will perform the action 'x' times.
- *      
- *      
- *   Plugin Command: ReturnLabel LearnNew LabelName
- *      LabelName = The name of an existing Label.
- *      
- *      This will memorize 'LabelName', but not go to it.
- *      I other words, it's like you called [Jump to Label: "Return: LabelName"],
- *   but without actually going to 'LabelName'.
  *      
  *      
  *   Plugin Command: Console ReturnLabel on/true/off/false/switch/toggle
@@ -283,8 +275,14 @@
  *      
  *      
  */
- // Delete the lines above+below this for the 'technical stuff' to appear in MV. 
+ 
+ //   Delete the lines above+below this for the 'technical stuff' to appear in MV. 
+ //   These weren't included because I felt that it would distract/confuse people.
+ //   If a plugin has one main function but can do 50 other small things, they
+ // might focus on the 50 things that don't matter as much.
+ 
  /*
+ *      
  * ------------------------------------------------------------------------------
  *                              x. Technical Stuff
  * ------------------------------------------------------------------------------
@@ -303,6 +301,14 @@
  *   likes to either ignore it or execute it, so it's safest to put something
  *   on that line that doesn't do anything. (It's probably related to the fact
  *   that it thinks it's being called to a label.)
+ *      
+ *      
+ *   Plugin Command: ReturnLabel LearnNew LabelName
+ *      LabelName = The name of an existing Label.
+ *      
+ *      This will memorize 'LabelName', but not go to it.
+ *      I other words, it's like you called [Jump to Label: "Return: LabelName"],
+ *   but without actually going to 'LabelName'.
  *      
  *      
  */
@@ -507,7 +513,7 @@
      || (cmd1 === 'ReturnLabel' && cmd2 === 'Console'))
     {
        consoleText += cmd1 + ' ' + cmd2 + ' ' + x;
-       var xText = x.toLowerCase(); //***
+       var xText = x.toLowerCase();
        if (xText === 'true' || xText === 'on')
           KLM.Console.ReturnLabel = true;
        else if (xText === 'false' || xText === 'off')
