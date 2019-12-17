@@ -1,0 +1,4 @@
+This is a list of KEdits that Keegan has made to these JS files.
+
+rpg_objects
+565 - Commented out line (numbers no longer automatically round)
