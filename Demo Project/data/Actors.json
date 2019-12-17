@@ -1,0 +1,4 @@
+[
+null,
+{"id":1,"battlerName":"KLM_Protagonist","characterIndex":0,"characterName":"__Hiro_McBraveHeart_1","classId":1,"equips":[1,0,0,0,0],"faceIndex":0,"faceName":"__Hiro_McBraveHeart_1","traits":[{"code":43,"dataId":11,"value":1},{"code":21,"dataId":0,"value":1.2},{"code":22,"dataId":1,"value":0.1},{"code":61,"dataId":0,"value":1}],"initialLevel":1,"maxLevel":99,"name":"Hiro","nickname":"","note":"","profile":""}
+]
